@@ -12,8 +12,9 @@ const Navbar: React.FC = () => {
         isMobile && setIsShowDialog(false); // Set isShowDialog to false when any link is clicked
       };
     const navLinks = (
-        NavItems.map((items) => {
+        NavItems.map((items ,index) => {
             return <Link
+            key={index}
                 activeClass="active"
                 to={`${items.toLowerCase()}`}
                 spy={true}
