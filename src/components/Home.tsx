@@ -16,8 +16,16 @@ import javaLogo from "../assets/java.svg";
 import { BiLogoMongodb } from "react-icons/bi";
 import { FaNodeJs } from "react-icons/fa";
 import homeBackgrounVideo from "../assets/homebackgrounVideo.mp4";
+import { FaArrowCircleDown } from "react-icons/fa";
+
 const Home: React.FC = () => {
     const typeWords = ["Web Development", "Frontend Development", "Backend Development"];
+    const scrollToAbout=():void=>{
+        const aboutSection=document.getElementById("about") as HTMLDivElement;
+        if (aboutSection) {
+            aboutSection.scrollIntoView({behavior:"smooth"})
+        }
+    }
     return <div id="home">
         <section>
             <h1 >Hi There , <br /> I'm  <span className='name'>Sobhandev Pramanik</span></h1>
@@ -36,7 +44,9 @@ const Home: React.FC = () => {
                     />
                     {/* Frontend Development */}
                 </p>
+                
             </div>
+            <button className='about-scroll-btn' onClick={scrollToAbout}><span>About Me</span><FaArrowCircleDown /></button>
             <div className='website-link'>
                 <ul >
                     <li className="linkedin"><Link to={'https://www.linkedin.com/in/sobhandev-pramanik-818464226/'} target='_blank'><IoLogoLinkedin className='icon' /></Link></li>
