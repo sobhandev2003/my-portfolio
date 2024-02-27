@@ -19,8 +19,8 @@ const Navbar: React.FC = () => {
                 to={`${items.toLowerCase()}`}
                 spy={true}
                 smooth={true}
-                offset={0}
-                duration={500}
+                offset={-72}
+                duration={400}
                 onClick={handleLinkClick}
             >
                 {items}

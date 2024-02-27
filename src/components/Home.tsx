@@ -15,6 +15,7 @@ import { SiTypescript } from "react-icons/si";
 import javaLogo from "../assets/java.svg";
 import { BiLogoMongodb } from "react-icons/bi";
 import { FaNodeJs } from "react-icons/fa";
+import homeBackgrounVideo from "../assets/homebackgrounVideo.mp4";
 const Home: React.FC = () => {
     const typeWords = ["Web Development", "Frontend Development", "Backend Development"];
     return <div id="home">
@@ -65,6 +66,9 @@ const Home: React.FC = () => {
 
 
         </section>
+        <video className='home-background'  autoPlay muted loop >
+        <source src={homeBackgrounVideo} type="video/mp4" />
+        </video>
 
     </div>
 }

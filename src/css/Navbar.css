@@ -86,8 +86,9 @@
   
    }
    .nav section:nth-child(2)  .active,
-   .nav .mobile-nav-items-dialog .active {
-    color: blue;
+   .nav .mobile-nav-items-dialog .active,
+   .nav a:hover {
+    color: orange;
     text-decoration: underline;
 }
 @media screen and (max-width:768px) {
