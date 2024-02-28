@@ -4,7 +4,9 @@
 
 #home {
     position: relative;
-    width: 100vw;
+    width: 98vw;
+    min-height: 90vh;
+   
     min-height: 90vh;
     display: flex;
     justify-content: space-around;
@@ -61,6 +63,9 @@
 
 #home section:nth-child(1) .type-div .type-text {
     color: #50ff84;
+}
+#home .website-link{
+    margin-bottom: 1rem;
 }
 
 #home .website-link ul {

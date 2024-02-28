@@ -1,11 +1,12 @@
 *{
   margin: 0;
   padding: 0;
+  /* overflow-x: hidden; */
 }
 body{
   background: #eceef9;
   overflow-x: hidden;
 }
-.blue{
-  color: blue;
+.color-02aabd{
+  color: #02aabd;
 }

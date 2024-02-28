@@ -1,5 +1,6 @@
 #contact{
-    width: 100vw;
-    min-height: 90vh;
+    width: 98vw;
+    height: 90vh;
+    padding: 2rem;
     /* border: 1px solid red; */
 }

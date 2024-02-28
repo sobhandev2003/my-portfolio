@@ -1,5 +1,17 @@
 #projects{
-    width: 100vw;
-    height: 90vh;
-    border: 1px solid red;
+    width: 98vw;
+    min-height: 90vh;
+    padding: 2rem;
+    background: linear-gradient(to left,#11998E , #38EF7D);
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+}
+@media screen and (max-width:550px){
+    #projects{
+        padding: 0;
+        padding-top: 2rem;
+    }
 }
