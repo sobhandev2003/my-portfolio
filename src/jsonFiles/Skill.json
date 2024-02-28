@@ -1,0 +1,48 @@
+{
+    "skills": [
+     
+        {
+            "technologyName": "HTML",
+            "logo": "htmlLogo.png"
+        },
+        {
+            "technologyName": "CSS",
+            "logo": "cssLogo.jpeg"
+        },
+         {
+            "technologyName": "JavaScript",
+            "logo": "jsLogo.png"
+        },
+         {
+            "technologyName": "TypeScript",
+            "logo": "tsLogo.png"
+        },
+         {
+            "technologyName": "React",
+            "logo": "reactLogo.png"
+        },
+        {
+            "technologyName": "Redux",
+            "logo": "reduxLogo.png"
+        }, 
+        {
+            "technologyName": "Node Js",
+            "logo": "nodeJsLogo.png"
+        }, {
+            "technologyName": "Express Js",
+            "logo": "expressJsLogo.png"
+        },
+         {
+            "technologyName": "MongoDB",
+            "logo": "mongodbLogo.png"
+        },
+        {
+            "technologyName": "Java",
+            "logo": "javaLogo.png"
+        }, 
+         {
+            "technologyName": "C",
+            "logo": "cLogo.png"
+        }
+    ]
+}

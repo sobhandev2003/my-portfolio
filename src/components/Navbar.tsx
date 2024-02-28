@@ -4,7 +4,7 @@ import navLogo from '../assets/navLogo.png'
 import { Link } from "react-scroll";
 import MenuIcon from '@mui/icons-material/Menu';
 
-const NavItems = ["Home", "About", "Skill", "Education", "Contact"]
+const NavItems = ["Home", "About", "Skill","Projects", "Education", "Contact"]
 const Navbar: React.FC = () => {
     const [isMobile, setIsMobile] = useState(false);
     const [isShowDialog,setIsShowDialog]=useState(false)

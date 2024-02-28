@@ -27,6 +27,7 @@
   "devDependencies": {
     "@types/file-saver": "^2.0.7",
     "@types/jspdf": "^2.0.0",
+    "@types/node": "^20.11.22",
     "@types/react": "^18.2.56",
     "@types/react-dom": "^18.2.19",
     "@types/react-router-dom": "^5.3.3",
