@@ -1,62 +1,72 @@
-#education{
+#education {
     width: 100vw;
-    height: 90vh;
+    min-height: 90vh;
     display: flex;
     flex-direction: column;
     gap: 2rem;
-  align-items: center;
-   padding-top: 2rem;
-   padding-bottom: 1rem;
-
+    align-items: center;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+background-color:color-mix(in srgb, rgb(54, 146, 238) 60%, rgb(10, 244, 244) 40%) ;
 }
-#education .courses-div{
+
+#education .courses-div {
     /* border: 1px solid red; */
+    margin-top: 2rem;
     width: 80%;
     height: 12rem;
     background: white;
     display: flex;
     gap: 2rem;
     border-radius: .5rem;
-   box-shadow:3px 3px 2px  rgb(212, 210, 210);
-   text-transform: capitalize;
+    box-shadow: 3px 3px 2px rgb(212, 210, 210);
+    text-transform: capitalize;
 }
-.courses-div .institute-image{
+
+.courses-div .institute-image {
     width: 30%;
     height: 100%;
 }
-.courses-div .institute-image img{
+
+.courses-div .institute-image img {
     width: 100%;
     height: 100%;
-    border-top-left-radius:.5rem ;
+    border-top-left-radius: .5rem;
     border-bottom-left-radius: .5rem;
 }
-.courses-div .courses-details{
+
+.courses-div .courses-details {
     margin: .2rem;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
 }
-.courses-div .courses-details .courses-title{
+
+.courses-div .courses-details .courses-title {
     color: rgb(1, 1, 109);
     font-size: 1.5rem;
     font-weight: 700;
     letter-spacing: .2px;
 }
-.courses-div .courses-details .institute{
+
+.courses-div .courses-details .institute {
     display: flex;
     flex-direction: column;
     letter-spacing: .5px;
     gap: .3rem;
 }
-.courses-div .courses-details .institute .institute-name{
+
+.courses-div .courses-details .institute .institute-name {
     color: black;
     font-size: 1.3rem;
     font-weight: 500;
-} 
-.courses-div .courses-details .institute .institute-address{
-    color:rgb(21, 20, 20);
 }
-.courses-div .courses-details .courses-status{
+
+.courses-div .courses-details .institute .institute-address {
+    color: rgb(21, 20, 20);
+}
+
+.courses-div .courses-details .courses-status {
     color: green;
     font-size: 1.5rem;
     font-weight: 600;
@@ -65,34 +75,41 @@
 }
 
 @media screen and (max-width:1200px) {
-    #education .courses-div{
+    #education .courses-div {
         width: 85%;
     }
-    .courses-div .courses-details .courses-title{
+
+    .courses-div .courses-details .courses-title {
         font-size: 1.3rem;
     }
-    .courses-div .courses-details .institute .institute-name{
+
+    .courses-div .courses-details .institute .institute-name {
         font-size: 1.1rem;
     }
 }
-@media screen and (max-width:950px){
-    #education .courses-div{
+
+@media screen and (max-width:950px) {
+    #education .courses-div {
         width: 90%;
     }
-    .courses-div .institute-image{
+
+    .courses-div .institute-image {
         width: 25%;
         height: 100%;
     }
-    .courses-div .courses-details .courses-title{
+
+    .courses-div .courses-details .courses-title {
         font-size: 1.1rem;
     }
-    .courses-div .courses-details .institute .institute-name{
+
+    .courses-div .courses-details .institute .institute-name {
         font-size: 1rem;
-       
+
     }
 }
-@media screen and (max-width:700px){
-    #education .courses-div{
+
+@media screen and (max-width:700px) {
+    #education .courses-div {
         width: 90%;
         flex-direction: column;
         height: max-content;
@@ -100,37 +117,45 @@
         /* padding: 1rem; */
         gap: 1rem;
         border-radius: .5rem;
-        
+
     }
-    .courses-div .institute-image{
+
+    .courses-div .institute-image {
         width: 100%;
-        height: 10rem;      
+        height: 10rem;
     }
-    .courses-div .institute-image img{
+
+    .courses-div .institute-image img {
         border-radius: 0;
         border-top-left-radius: .5rem;
         border-top-right-radius: .5rem;
     }
+
     .courses-div .courses-details {
-        margin:0 1rem 1rem 1rem;
+        margin: 0 1rem 1rem 1rem;
         height: 8rem;
     }
-    .courses-div .courses-details .courses-title{
+
+    .courses-div .courses-details .courses-title {
         font-size: 1.2rem;
     }
-    .courses-div .courses-details .institute .institute-name{
+
+    .courses-div .courses-details .institute .institute-name {
         font-size: 1.1rem;
     }
 }
-@media screen and (max-width:600px){
+
+@media screen and (max-width:600px) {
     .courses-div .courses-details {
-        margin:0 1rem 1rem 1rem;
+        margin: 0 1rem 1rem 1rem;
         height: 10rem;
     }
-    .courses-div .courses-details .courses-title{
+
+    .courses-div .courses-details .courses-title {
         font-size: 1.1rem;
     }
-    .courses-div .courses-details .institute .institute-name{
+
+    .courses-div .courses-details .institute .institute-name {
         font-size: 1rem;
     }
 }

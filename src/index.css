@@ -10,3 +10,11 @@ body{
 .color-02aabd{
   color: #02aabd;
 }
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button{
+  -webkit-appearance: none;
+}
+
+.color-6200ee{
+  color: #6200ee;
+}
