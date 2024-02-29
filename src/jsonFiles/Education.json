@@ -1,0 +1,28 @@
+{
+    "education":[
+        {
+            "CourseTitle":" Bachelor of Technology in Computer Science Engineering",
+            "instituteName":"Abacus Institute of Engineering and Management.",
+            "instituteAddress":"Kola, West Bengal 712148",
+            "instituteImage":"AIEM.JPG",
+            "Duration":"2021-2025",
+            "Status":"Present"
+        },
+        {
+            "CourseTitle":"Class XII",
+            "instituteName":"NANDANPUR RUPCHAND ACADEMY.",
+            "instituteAddress":"Nandanpur , West Bengal 712417",
+            "instituteImage":"NRCA.jpg",
+            "Duration":"2021",
+            "Status":"Completed"
+        },
+        {
+            "CourseTitle":"Class X",
+            "instituteName":"NANDANPUR RUPCHAND ACADEMY.",
+            "instituteAddress":"Nandanpur , West Bengal 712417",
+            "instituteImage":"NRCA.jpg",
+            "Duration":"2019",
+            "Status":"Completed"
+        }
+    ]
+}
