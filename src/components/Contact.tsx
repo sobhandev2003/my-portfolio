@@ -30,7 +30,8 @@ const sendEmail = (e:React.SyntheticEvent) => {
     })
     .then(
       () => {
-        toast.success("Email Successfully Sent")
+        toast.success("Email Successfully Sent");
+        formRef.current?.reset()
       },
       (error) => {
         toast.error( error.text)
