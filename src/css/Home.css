@@ -4,9 +4,7 @@
 
 #home {
     position: relative;
-    width: 98vw;
-    min-height: 90vh;
-   
+    width: 100vw;
     min-height: 90vh;
     display: flex;
     justify-content: space-around;

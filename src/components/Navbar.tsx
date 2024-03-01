@@ -4,14 +4,15 @@ import navLogo from '../assets/navLogo.png'
 import { Link } from "react-scroll";
 import MenuIcon from '@mui/icons-material/Menu';
 
-const NavItems = ["Home", "About", "Skill","Projects", "Education", "Contact"]
+const NavItems = ["Home", "About", "Skill","Projects", "Education", "Contact"];
 const Navbar: React.FC = () => {
     const [isMobile, setIsMobile] = useState(false);
     const [isShowDialog,setIsShowDialog]=useState(false)
     const handleLinkClick = () => {
         isMobile && setIsShowDialog(false); // Set isShowDialog to false when any link is clicked
       };
-    const navLinks = (
+
+  const navLinks = (
         NavItems.map((items ,index) => {
             return <Link
             key={index}
@@ -19,8 +20,8 @@ const Navbar: React.FC = () => {
                 to={`${items.toLowerCase()}`}
                 spy={true}
                 smooth={true}
-                offset={-72}
-                duration={400}
+                offset={-73}
+                duration={300}
                 onClick={handleLinkClick}
             >
                 {items}

@@ -14,6 +14,7 @@
     letter-spacing: 2px;
     display: flex;
     gap: 1rem;
+    color: #01013c;
 }
 #contact .contact-box {
     /* position: relative; */
@@ -50,7 +51,7 @@
     justify-content: center;
 }
 
-#contact .contact-box .contact-section .contact-from {
+ .contact-box .contact-from {
 
     /* border: 1px solid red; */
     position: relative;
@@ -188,8 +189,17 @@ background-color:#d2dde7;
     }
     #contact .contact-box .contact-section{
         width: 90%;
+       
+    }
+     .contact-box  .contact-from{
+        padding-bottom: 2rem;
     }
     .contact-box .contact-section .contact-from label textarea{
         height: 10rem;
       }
+}
+@media screen and (max-width:450px){
+    #contact h1{
+        font-size: 1.8rem;
+    }
 }
