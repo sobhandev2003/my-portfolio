@@ -1,5 +1,4 @@
 import { Link } from 'react-scroll';
-import {Link as navigateLink } from 'react-router-dom'
 import '../css/Footer.css';
 import { IoIosArrowDroprightCircle } from "react-icons/io";
 import { FaMobileScreenButton } from "react-icons/fa6";
