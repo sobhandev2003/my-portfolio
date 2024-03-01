@@ -2,6 +2,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Anta&family=Open+Sans:ital,wght@0,500;1,500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Namdhinggo:wght@600&display=swap');
 
+@keyframes outer-div-animation {
+
+    50%{
+        transform: skew(3deg,2deg);
+    }
+    100%{
+        transform: skew(3deg,1deg);
+    }
+}
 #home {
     position: relative;
     width: 100vw;
@@ -164,7 +173,10 @@
     box-shadow: 0px 3px 8px 6px gray;
     cursor: pointer;
     /* border: 1px solid red; */
-
+    transition: all 0.3s ease-in-out;
+}
+#home section:nth-child(2) .outer-div:hover{
+    animation: outer-div-animation .5s alternate infinite ;
 }
 
 #home section:nth-child(2) .inner-div {

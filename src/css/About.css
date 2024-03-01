@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Namdhinggo:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
+
 #about {
     width: 100vw;
     min-height: 90vh;
@@ -30,7 +31,11 @@
     display: flex;
     justify-content: center;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+/* transition-duration: 1s; */
+/* transform: skew(2deg , 2deg); */
+
 }
+
 
 .img-div .color-img,
 .img-div .black-white-img {
