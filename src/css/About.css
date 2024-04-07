@@ -85,6 +85,7 @@
     line-height: 1.2rem;
     font-size: 1.1rem;
     color: rgb(1, 1, 23);
+    text-align:justify;
 }
 
 #about section:nth-child(2) .resume-download-btn {

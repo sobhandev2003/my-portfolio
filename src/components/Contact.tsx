@@ -1,7 +1,7 @@
 import '../css/Contact.css'
-import React, { useRef } from 'react';
-import emailjs from '@emailjs/browser';
-import { toast } from 'react-toastify';
+import React, { useRef, useState } from 'react';
+// import emailjs from '@emailjs/browser';
+// import { toast } from 'react-toastify';
 
 
 import contactPage from '../assets/contactPage.jpeg';
@@ -11,32 +11,46 @@ import { MdEmail } from "react-icons/md";
 import { FaPhoneAlt } from "react-icons/fa";
 import { BsFillSendFill } from "react-icons/bs";
 import { BiMessageDetail } from "react-icons/bi";
+import { mailOptionType, sendEmail } from '../services/sendContactEmail';
 const Contact:React.FC = () => { 
 //NOTE -This function send Email 
 const formRef = useRef<HTMLFormElement>(null);
-const sendEmail = (e:React.SyntheticEvent) => {
+
+const [formData, setFormData] = useState({
+  name: '',
+  email: '',
+  phone: '',
+  message: ''
+});
+const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>): void => {
+  const { name, value } = e.target;
+  setFormData((prevState:any) => ({
+    ...prevState,
+    [name]: value
+  }));
+};
+
+const handelSubmit = async(e:React.SyntheticEvent) => {
   e.preventDefault();
 
-  if(!formRef.current){
-    toast.error("Something Wrong!!")
-    return;
-  }
+  console.log(formData)
 
-  emailjs.sendForm(import.meta.env.VITE_EmailJs_SERVICE_ID,
-     import.meta.env.VITE_EmailJs_TEMPLATE_ID,
-      formRef.current,
-       {
-      publicKey: import.meta.env.VITE_EmailJs_PUBLIC_KEY,
-    })
-    .then(
-      () => {
-        toast.success("Email Successfully Sent");
-        formRef.current?.reset()
-      },
-      (error) => {
-        toast.error( error.text)
-      },
-    );
+  const mailOption:mailOptionType={
+    mailSendFrom:formData.email,
+    mailSendTo:"sobhandevp2021@gmail.com",
+    mailSubject:`Get email from ${formData.name}`,
+    phoneNumber:formData.phone,
+    mailText:formData.message
+  }
+   const success=await sendEmail(mailOption)
+  if (success) {
+    if (formRef.current) {
+      formRef.current.reset()
+    }
+  
+  }
+ 
+
 };
 
   return <div id='contact'>
@@ -46,21 +60,21 @@ const sendEmail = (e:React.SyntheticEvent) => {
       <img src={contactPage} alt=''></img>
     </section>
     <section className='contact-section'>
-      <form className='contact-from' ref={formRef} onSubmit={sendEmail}>
+      <form className='contact-from' ref={formRef} onSubmit={handelSubmit}>
         <label >
-        <input type="text" className='input-field' name="name" minLength={3} maxLength={50} placeholder='' required />
+        <input type="text" className='input-field' name="name"  onChange={handleChange} minLength={3} maxLength={50} placeholder='' required />
         <span className='placeholder'><FaUser />Name </span>
       </label>
       <label >
-      <input type="email" className='input-field' name="email" placeholder=''  maxLength={20} required/>
+      <input type="email" className='input-field' name="email" onChange={handleChange} placeholder=''  maxLength={20} required/>
       <span className='placeholder'><MdEmail />Email</span>
       </label>
     <label >
-    <input type="tel" className='input-field' name="phone" placeholder='' pattern="[0-9]{10}" required/>
+    <input type="tel" className='input-field' name="phone" onChange={handleChange} placeholder='' pattern="[0-9]{10}" required/>
     <span className='placeholder'><FaPhoneAlt />Phone</span>
     </label>
     <label >
-    <textarea name="message" className='textarea-field'  placeholder='' minLength={10}  required spellCheck={true}/>
+    <textarea name="message" className='textarea-field' onChange={handleChange}  placeholder='' minLength={10}  required spellCheck={true}/>
     <span className='textarea-placeholder'><BiMessageDetail />Message</span>
     </label>
       <button type="submit" className='send-btn'>Send<BsFillSendFill /></button>

@@ -6,7 +6,7 @@ import { TbBrandLeetcode } from "react-icons/tb";
 import { IoLogoLinkedin } from "react-icons/io";
 import { FaGithub } from "react-icons/fa";
 import { Link } from 'react-router-dom';
-import myPhot from '../assets/myPhoto.jpg'
+import myPhot from '../assets/myPhoto.png'
 import { FaHtml5 } from "react-icons/fa6";
 import { FaCss3Alt } from "react-icons/fa";
 import { TbBrandJavascript } from "react-icons/tb";
