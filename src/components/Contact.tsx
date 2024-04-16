@@ -66,7 +66,7 @@ const handelSubmit = async(e:React.SyntheticEvent) => {
         <span className='placeholder'><FaUser />Name </span>
       </label>
       <label >
-      <input type="email" className='input-field' name="email" onChange={handleChange} placeholder=''  maxLength={20} required/>
+      <input type="email" className='input-field' name="email" onChange={handleChange} placeholder=''   required/>
       <span className='placeholder'><MdEmail />Email</span>
       </label>
     <label >
