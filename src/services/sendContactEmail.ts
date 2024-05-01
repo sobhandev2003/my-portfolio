@@ -5,30 +5,31 @@ import { toast } from "react-toastify";
 export interface mailOptionType {
     mailSendFrom: string;
     mailSendTo: string;
-    phoneNumber?:string;
+    phoneNumber?: string;
     mailSubject: string;
     mailText: string;
     html?: string;
 }
-export const sendEmail=async(mailOption:mailOptionType)=>{
-        try {
-            // console.log(mailOption);
-            const response=await axios.post(
-                import.meta.env.VITE_EMAIL_SERVICE_URL,
-                mailOption)
+export const sendEmail = async (mailOption: mailOptionType) => {
+    try {
 
-                if(response.data.success){
-                    toast.success("Email sent successfully.");
-                    return response.data.success
-                }
+        const response = await axios.post(
+            import.meta.env.VITE_EMAIL_SERVICE_URL,
+            mailOption)
 
-        } catch (error) {
-            if(isAxiosError(error)){
-                toast.error(error.message)
-                
-            }
-            else{
-                toast.error("Email server not response")
-            }
+        if (response.data.success) {
+            return response.data.success
         }
+
+
+
+    } catch (error) {
+        if (isAxiosError(error)) {
+            toast.error(error.message)
+
+        }
+        else {
+            toast.error("Email server not response")
+        }
+    }
 }

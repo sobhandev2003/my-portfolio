@@ -12,6 +12,7 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { BsFillSendFill } from "react-icons/bs";
 import { BiMessageDetail } from "react-icons/bi";
 import { mailOptionType, sendEmail } from '../services/sendContactEmail';
+import { toast } from 'react-toastify';
 const Contact:React.FC = () => { 
 //NOTE -This function send Email 
 const formRef = useRef<HTMLFormElement>(null);
@@ -33,7 +34,7 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElemen
 const handelSubmit = async(e:React.SyntheticEvent) => {
   e.preventDefault();
 
-  console.log(formData)
+  // console.log(formData)
 
   const mailOption:mailOptionType={
     mailSendFrom:formData.email,
@@ -42,15 +43,20 @@ const handelSubmit = async(e:React.SyntheticEvent) => {
     phoneNumber:formData.phone,
     mailText:formData.message
   }
-   const success=await sendEmail(mailOption)
-  if (success) {
-    if (formRef.current) {
-      formRef.current.reset()
-    }
-  
-  }
- 
+   const success= sendEmail(mailOption)
+  toast.promise(success,{
+    pending: 'Sending email...', // Display loading message
+    success: 'Email sent successfully.', // Display success message
+    error: 'Failed to send email. Please try again later.' // Display error message
+});
 
+  success.then((res)=>{
+    if(res){
+      if (formRef.current) {
+            formRef.current.reset()
+      } 
+    }
+  })
 };
 
   return <div id='contact'>
