@@ -1,6 +1,7 @@
 import '../css/Navbar.css'
 import { useEffect, useState } from "react";
-import navLogo from '../assets/navLogo.png'
+// import navLogo from '../assets/_Sobhan__ 2nd.png'
+import navLogo from '../assets/_Sobhan__.png'
 import { Link } from "react-scroll";
 import MenuIcon from '@mui/icons-material/Menu';
 
@@ -47,7 +48,7 @@ const Navbar: React.FC = () => {
         <nav className="nav">
             <section>
                 <img src={navLogo} alt="" className="nav-logo" />
-                <h3>Sobhan</h3>
+                {/* <h3>Sobhan</h3> */}
             </section>
             <section>
                 {!isMobile && navLinks}

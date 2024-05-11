@@ -3,6 +3,7 @@
 import '../css/Home.css'
 import { Typewriter } from 'react-simple-typewriter';
 import { TbBrandLeetcode } from "react-icons/tb";
+import { SiGeeksforgeeks } from "react-icons/si";
 import { IoLogoLinkedin } from "react-icons/io";
 import { FaGithub } from "react-icons/fa";
 import { Link } from 'react-router-dom';
@@ -52,6 +53,7 @@ const Home: React.FC = () => {
                     <li className="linkedin"><Link to={'https://www.linkedin.com/in/sobhandev-pramanik-818464226/'} target='_blank'><IoLogoLinkedin className='icon' /></Link></li>
                     <li className="github"><Link to={'https://github.com/sobhandev2003'} target='_blank'><FaGithub className='icon' /></Link></li>
                     <li className="leetCode"><Link to={'https://leetcode.com/sobhandevp2021/'} target='_blank'><TbBrandLeetcode className='icon' /></Link></li>
+                    <li className="leetCode"><Link to={'https://www.geeksforgeeks.org/user/sobhandev2003/'} target='_blank'><SiGeeksforgeeks  className='icon' /></Link></li>
                 </ul>
             </div>
         </section>

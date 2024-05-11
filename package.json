@@ -16,7 +16,9 @@
     "@mui/icons-material": "^5.15.11",
     "@mui/material": "^5.15.11",
     "axios": "^1.6.8",
+    "clsx": "^2.1.1",
     "file-saver": "^2.0.5",
+    "framer-motion": "^11.1.9",
     "jspdf": "^2.5.1",
     "nodemailer": "^6.9.13",
     "react": "^18.2.0",
@@ -26,6 +28,7 @@
     "react-scroll": "^1.9.0",
     "react-simple-typewriter": "^5.0.1",
     "react-toastify": "^10.0.4",
+    "tailwind-merge": "^2.3.0",
     "typed.js": "^2.1.0"
   },
   "devDependencies": {
