@@ -7,7 +7,7 @@ import { SiTypescript } from "react-icons/si";
 import { FaReact } from "react-icons/fa";
 import { BiLogoMongodb } from "react-icons/bi";
 import { FaNodeJs } from "react-icons/fa";
-
+import { SiRedux } from "react-icons/si";
 import javaLogo from "../assets/java.svg";
 export function OrbitingCirclesHome() {
     return (
@@ -56,22 +56,14 @@ export function OrbitingCirclesHome() {
             </OrbitingCircles>
 
             {/* Outer Circles (reverse) */}
-            <OrbitingCircles
+             <OrbitingCircles
                 className="h-[50px] w-[50px] border-none bg-transparent"
                 reverse
                 radius={160}
                 duration={20}
+                delay={24}
             >
-                <FaReact className="text-9xl text-sky-700" />
-            </OrbitingCircles>
-            <OrbitingCircles
-                className="h-[50px] w-[50px] border-none bg-transparent"
-                reverse
-                radius={160}
-                duration={20}
-                delay={25}
-            >
-                <BiLogoMongodb className="text-9xl text-green-500" />
+                <SiRedux className="text-5xl" color="#593d88" />
             </OrbitingCircles>
             <OrbitingCircles
                 className="h-[50px] w-[50px] border-none bg-transparent"
@@ -80,6 +72,25 @@ export function OrbitingCirclesHome() {
                 duration={20}
                 delay={20}
             >
+                <FaReact className="text-9xl text-sky-700" />
+            </OrbitingCircles>
+            <OrbitingCircles
+                className="h-[50px] w-[50px] border-none bg-transparent"
+                reverse
+                radius={160}
+                duration={20}
+                delay={16}
+            >
+                <BiLogoMongodb className="text-9xl text-green-500" />
+            </OrbitingCircles>
+           
+            <OrbitingCircles
+                className="h-[50px] w-[50px] border-none bg-transparent"
+                reverse
+                radius={160}
+                duration={20}
+                delay={12}
+            >
                 <FaNodeJs className="text-5xl text-emerald-700" />
             </OrbitingCircles>
             <OrbitingCircles
@@ -87,7 +98,7 @@ export function OrbitingCirclesHome() {
                 reverse
                 radius={160}
                 duration={20}
-                delay={15}
+                delay={8}
             >
                 {/* <FaJava className="text-9xl text-green-500" /> */}
                 <img src={javaLogo} alt='' />
