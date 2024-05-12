@@ -18,13 +18,31 @@ import { BiLogoMongodb } from "react-icons/bi";
 import { FaNodeJs } from "react-icons/fa";
 import homeBackgrounVideo from "../assets/homebackgrounVideo.mp4";
 import { FaArrowCircleDown } from "react-icons/fa";
+import { OrbitingCirclesHome } from './OrbitingCirclesHome';
+import { CgMail } from "react-icons/cg";
+import { IoLogoWhatsapp } from "react-icons/io";
+import { email } from './About';
+export const WebsiteLink:React.FC=()=>{
 
+    return(
+        <div className='website-link'>
+                <ul >
+                    <li className="linkedin"><Link to={`mailto:${email}`} target='_blank'><CgMail className='icon' /></Link></li>
+                    <li className="linkedin"><Link to={`https://wa.me/918649863002`} target='_blank'><IoLogoWhatsapp className='icon' /></Link></li>
+                    <li className="linkedin"><Link to={'https://www.linkedin.com/in/sobhandev-pramanik-818464226/'} target='_blank'><IoLogoLinkedin className='icon' /></Link></li>
+                    <li className="github"><Link to={'https://github.com/sobhandev2003'} target='_blank'><FaGithub className='icon' /></Link></li>
+                    <li className="leetCode"><Link to={'https://leetcode.com/sobhandevp2021/'} target='_blank'><TbBrandLeetcode className='icon' /></Link></li>
+                    <li className="leetCode"><Link to={'https://www.geeksforgeeks.org/user/sobhandev2003/'} target='_blank'><SiGeeksforgeeks className='icon' /></Link></li>
+                </ul>
+            </div>
+    )
+}
 const Home: React.FC = () => {
     const typeWords = ["Web Development", "Frontend Development", "Backend Development"];
-    const scrollToAbout=():void=>{
-        const aboutSection=document.getElementById("about") as HTMLDivElement;
+    const scrollToAbout = (): void => {
+        const aboutSection = document.getElementById("about") as HTMLDivElement;
         if (aboutSection) {
-            aboutSection.scrollIntoView({behavior:"smooth"})
+            aboutSection.scrollIntoView({ behavior: "smooth" })
         }
     }
     return <div id="home">
@@ -45,20 +63,14 @@ const Home: React.FC = () => {
                     />
                     {/* Frontend Development */}
                 </p>
-                
+
             </div>
             <button className='about-scroll-btn' onClick={scrollToAbout}><span>About Me</span><FaArrowCircleDown /></button>
-            <div className='website-link'>
-                <ul >
-                    <li className="linkedin"><Link to={'https://www.linkedin.com/in/sobhandev-pramanik-818464226/'} target='_blank'><IoLogoLinkedin className='icon' /></Link></li>
-                    <li className="github"><Link to={'https://github.com/sobhandev2003'} target='_blank'><FaGithub className='icon' /></Link></li>
-                    <li className="leetCode"><Link to={'https://leetcode.com/sobhandevp2021/'} target='_blank'><TbBrandLeetcode className='icon' /></Link></li>
-                    <li className="leetCode"><Link to={'https://www.geeksforgeeks.org/user/sobhandev2003/'} target='_blank'><SiGeeksforgeeks  className='icon' /></Link></li>
-                </ul>
-            </div>
+            
+            <WebsiteLink/>
         </section>
         <section>
-            <div className="outer-div" >
+            {/* <div className="outer-div" >
                 <div className='inner-div'>
                     <img src={myPhot} alt=''/>
                     <ul>
@@ -74,12 +86,12 @@ const Home: React.FC = () => {
                 </ul>
                 </div>
                
-            </div>
+            </div> */}
 
-
+            <OrbitingCirclesHome />
         </section>
-        <video className='home-background'  autoPlay muted loop >
-        <source src={homeBackgrounVideo} type="video/mp4" />
+        <video className='home-background' autoPlay muted loop >
+            <source src={homeBackgrounVideo} type="video/mp4" />
         </video>
 
     </div>

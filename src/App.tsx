@@ -1,10 +1,11 @@
 
-import './App.css'
+// import './App.css'
 import About from './components/About'
 import Contact from './components/Contact'
 import Education from './components/Education'
 import Footer from './components/Footer'
 import Home from './components/Home'
+import MagicCardGradient from './components/MagicCardGradient'
 import Navbar from './components/Navbar'
 import Projects from './components/Projects'
 import Skill from './components/Skill'
@@ -24,8 +25,7 @@ function App() {
       <Contact/>
       <Footer/>
       </section>
-   
-      
+   {/* <MagicCardGradient/> */}
     </>
   )
 }

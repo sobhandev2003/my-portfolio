@@ -26,6 +26,7 @@
 #about .img-div {
     /* border: 1px solid red; */
     width: 60%;
+    height: 20rem;
     border-radius: 2rem;
     cursor: pointer;
     display: flex;

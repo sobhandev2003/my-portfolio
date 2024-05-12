@@ -7,6 +7,7 @@ import { GrMapLocation } from "react-icons/gr";
 import { TbBrandLeetcode } from "react-icons/tb";
 import { IoLogoLinkedin } from "react-icons/io";
 import { FaGithub } from "react-icons/fa";
+import { WebsiteLink } from './Home';
 const quickLinkItems = ["Home", "About", "Skill", "Projects", "Education"];
 const Footer = () => {
 
@@ -56,13 +57,14 @@ const Footer = () => {
           <span>West Bengal , India 712417</span>
         </li>
       </ul>
-      <div>
+      {/* <div>
         <ul className='website-link'>
           <li className="linkedin"><a href={'https://www.linkedin.com/in/sobhandev-pramanik-818464226/'} target='_blank'><IoLogoLinkedin className='icon' /></a></li>
           <li className="github"><a href={'https://github.com/sobhandev2003'} target='_blank'><FaGithub className='icon' /></a></li>
           <li className="leetCode"><a href={'https://leetcode.com/sobhandevp2021/'} target='_blank'><TbBrandLeetcode className='icon' /></a></li>
         </ul>
-      </div>
+      </div> */}
+      <WebsiteLink/>
     </section>
   </footer>
 }

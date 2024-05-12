@@ -11,6 +11,7 @@ const Projects = () => {
         snapshot={project.snapshot}
         githubRepoLink={project.githubRepoLink}
         websiteLink={project.websiteLink}
+        tools={project.tools}
         />
       })
     }

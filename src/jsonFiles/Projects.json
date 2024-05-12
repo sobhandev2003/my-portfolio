@@ -5,21 +5,24 @@
             "description":"A FullStack Website website for ordering food online. It links sellers and buyers in the food industry smoothly. Built with React, Redux, Node.js, Express.js, and MongoDB.",
             "snapshot":"Foodiez.JPG",
             "githubRepoLink":"https://github.com/sobhandev2003/Foodiez",
-            "websiteLink":"https://sobhan-foodiez.netlify.app/"
+            "websiteLink":"https://sobhan-foodiez.netlify.app/",
+            "tools":["React Js","CSS","Redux ToolKit","Node Js","Express Js","MongoDB","JWT"]
         },
         {
             "title":"Snake game",
             "description":" A web-based game created with HTML, CSS, and JavaScript. It includes multiple levels, the ability to save high scores in local storage, and display them.",
             "snapshot":"snakegame.JPG",
             "githubRepoLink":"https://github.com/sobhandev2003/SnakeGame",
-            "websiteLink":"https://sobhandev2003.github.io/SnakeGame/"
+            "websiteLink":"https://sobhandev2003.github.io/SnakeGame/",
+            "tools":["HTML","CSS","JavaScript"]
         },
          {
             "title":"Age Calculator",
             "description":"A web app accurately determining age from birthdate. Developed with HTML, CSS, and JavaScript for user convenience.",
             "snapshot":"ageCalculator.JPG",
             "githubRepoLink":"https://github.com/sobhandev2003/Age-Calculator",
-            "websiteLink":"https://sobhandev2003.github.io/Age-Calculator/"
+            "websiteLink":"https://sobhandev2003.github.io/Age-Calculator/",
+            "tools":["HTML","CSS","JavaScript"]
         }
        
     ]
