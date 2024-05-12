@@ -4,9 +4,7 @@ import { IoIosArrowDroprightCircle } from "react-icons/io";
 import { FaMobileScreenButton } from "react-icons/fa6";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { GrMapLocation } from "react-icons/gr";
-import { TbBrandLeetcode } from "react-icons/tb";
-import { IoLogoLinkedin } from "react-icons/io";
-import { FaGithub } from "react-icons/fa";
+
 import { WebsiteLink } from './Home';
 const quickLinkItems = ["Home", "About", "Skill", "Projects", "Education"];
 const Footer = () => {

@@ -7,15 +7,7 @@ import { SiGeeksforgeeks } from "react-icons/si";
 import { IoLogoLinkedin } from "react-icons/io";
 import { FaGithub } from "react-icons/fa";
 import { Link } from 'react-router-dom';
-import myPhot from '../assets/myPhoto.png'
-import { FaHtml5 } from "react-icons/fa6";
-import { FaCss3Alt } from "react-icons/fa";
-import { TbBrandJavascript } from "react-icons/tb";
-import { FaReact } from "react-icons/fa";
-import { SiTypescript } from "react-icons/si";
-import javaLogo from "../assets/java.svg";
-import { BiLogoMongodb } from "react-icons/bi";
-import { FaNodeJs } from "react-icons/fa";
+
 import homeBackgrounVideo from "../assets/homebackgrounVideo.mp4";
 import { FaArrowCircleDown } from "react-icons/fa";
 import { OrbitingCirclesHome } from './OrbitingCirclesHome';

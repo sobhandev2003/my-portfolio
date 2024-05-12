@@ -28,7 +28,7 @@ const About: React.FC = () => {
         {/* <img src={colorPhoto} alt="" className='color-img' />
         <img src={balackWhitePhoto} alt="" className='black-white-img' /> */}
         <img src={imageurl} alt="" className='absolute object-center w-11/12 z-10 h-full' />
-        <MagicCardGradient image={imageurl} />
+        <MagicCardGradient  />
       </div>
     </section>
     <section>

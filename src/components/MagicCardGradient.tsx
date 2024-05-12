@@ -3,7 +3,7 @@ import {
     MagicContainer,
   } from "./magicui/magic-card";
   
- function MagicCardGradient({image}:{image:string}) {
+ function MagicCardGradient() {
     return (
       <MagicContainer
         className={
