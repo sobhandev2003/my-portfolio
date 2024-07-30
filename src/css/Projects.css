@@ -1,13 +1,12 @@
 #projects{
+    position: relative;
     width: 98vw;
     min-height: 90vh;
     padding: 2rem;
     background: linear-gradient(to left,#11998E , #38EF7D);
     display: flex;
-    gap: 3rem;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 @media screen and (max-width:550px){
     #projects{
