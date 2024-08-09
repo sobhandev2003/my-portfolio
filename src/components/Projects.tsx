@@ -7,16 +7,18 @@ import Slider from "react-slick";
 const Projects = () => {
   const settings = {
     dots: true,
+    // fade: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
+    // autoplay: true,
     autoplaySpeed: 1500,
-    cssEase: "linear"
+    cssEase: "linear",
+
   };
   return <div id="projects" className=''>
-    <div className=' w-[45%]'>
+    <div className='w-[45%] sm:w-[90%] lg:w-[70%] '>
       {
         projects &&
         <Slider {...settings} >{
