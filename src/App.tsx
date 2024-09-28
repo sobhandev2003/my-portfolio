@@ -21,7 +21,9 @@ function App() {
       <Skill/>
       <Projects/>
       <Education/>
+      <div className='fixed bottom-0 right-[1%]'>
       <Contact/>
+      </div>
       <Footer/>
       </section>
    {/* <MagicCardGradient/> */}

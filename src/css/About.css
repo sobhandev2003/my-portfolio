@@ -11,7 +11,7 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background: white;
+    /* background: white; */
     padding-bottom: 1rem;
 }
 
@@ -32,8 +32,8 @@
     display: flex;
     justify-content: center;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-/* transition-duration: 1s; */
-/* transform: skew(2deg , 2deg); */
+    /* transition-duration: 1s; */
+    /* transform: skew(2deg , 2deg); */
 
 }
 
@@ -70,7 +70,8 @@
     font-family: "Annapurna SIL", serif;
     font-weight: 700;
     font-style: normal;
-    color: rgb(1, 1, 48);
+    /* color: rgb(1, 1, 48); */
+    color: #fff;
 }
 
 #about section:nth-child(2) h2 {
@@ -85,8 +86,9 @@
     font-style: normal;
     line-height: 1.2rem;
     font-size: 1.1rem;
-    color: rgb(1, 1, 23);
-    text-align:justify;
+    /* color: rgb(1, 1, 23); */
+    color: #fff;
+    text-align: justify;
 }
 
 #about section:nth-child(2) .resume-download-btn {
@@ -111,52 +113,63 @@
     justify-content: center;
     gap: .2rem;
     margin-top: 2rem;
-   
+
 
 }
 
 #about section:nth-child(2) .resume-download-btn .icon {
     font-size: 1.5rem;
 }
-@media screen and (max-width:1200px){
-    #about .img-div{
+
+@media screen and (max-width:1200px) {
+    #about .img-div {
         width: 70%;
     }
 }
-@media screen and (max-width:1000px){
-    #about .img-div{
+
+@media screen and (max-width:1000px) {
+    #about .img-div {
         width: 80%;
     }
 }
-@media screen and (max-width:766px){
-    #about{
+
+@media screen and (max-width:766px) {
+    #about {
         flex-direction: column;
         gap: 4rem;
 
     }
-    #about section:nth-child(1){
+
+    #about section:nth-child(1) {
         width: 70%;
     }
-    #about .img-div{
+
+    #about .img-div {
         margin-top: 3rem;
         width: 70%;
     }
-   
-    #about section:nth-child(2){
+
+    #about section:nth-child(2) {
         width: 80%;
         padding-bottom: 4rem;
     }
 }
 
 @media screen and (max-width:500px) {
-    #about section:nth-child(1){
+    #about section:nth-child(1) {
         width: 80%;
     }
-    #about .img-div{
+
+    #about .img-div {
         margin-top: 3rem;
         width: 80%;
     }
-    #about section:nth-child(2){
+
+    #about section:nth-child(2) {
         width: 90%;
     }
+}
+
+.perspective-md {
+    perspective: 2000px;
 }

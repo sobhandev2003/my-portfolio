@@ -7,7 +7,7 @@
     align-items: center;
     padding-top: 2rem;
     padding-bottom: 3rem;
-background-color:color-mix(in srgb, rgb(54, 146, 238) 60%, rgb(10, 244, 244) 40%) ;
+/* background-color:color-mix(in srgb, rgb(54, 146, 238) 60%, rgb(10, 244, 244) 40%) ; */
 }
 
 #education .courses-div {

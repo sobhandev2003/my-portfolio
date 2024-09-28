@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { ProjectsCard } from './Cards'
 import projects from '../jsonFiles/Projects.json'
 import Slider from "react-slick";
+
 const Projects = () => {
   const settings = {
     dots: true,

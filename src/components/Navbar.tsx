@@ -1,22 +1,21 @@
 import '../css/Navbar.css'
 import { useEffect, useState } from "react";
-// import navLogo from '../assets/_Sobhan__ 2nd.png'
 import navLogo from '../assets/_Sobhan__.png'
 import { Link } from "react-scroll";
 import MenuIcon from '@mui/icons-material/Menu';
 
-const NavItems = ["Home", "About", "Skill","Projects", "Education", "Contact"];
+const NavItems = ["Home", "About", "Skill", "Projects", "Education"];
 const Navbar: React.FC = () => {
     const [isMobile, setIsMobile] = useState(false);
-    const [isShowDialog,setIsShowDialog]=useState(false)
+    const [isShowDialog, setIsShowDialog] = useState(false)
     const handleLinkClick = () => {
         isMobile && setIsShowDialog(false); // Set isShowDialog to false when any link is clicked
-      };
+    };
 
-  const navLinks = (
-        NavItems.map((items ,index) => {
+    const navLinks = (
+        NavItems.map((items, index) => {
             return <Link
-            key={index}
+                key={index}
                 activeClass="active"
                 to={`${items.toLowerCase()}`}
                 spy={true}
@@ -43,20 +42,19 @@ const Navbar: React.FC = () => {
             mobileQuery.removeEventListener('change', handleResize);
         };
     }, [])
-    
+
     return (
         <nav className="nav">
             <section>
                 <img src={navLogo} alt="" className="nav-logo" />
-                {/* <h3>Sobhan</h3> */}
             </section>
             <section>
                 {!isMobile && navLinks}
-                {isMobile &&  <MenuIcon className='toggle-btn' onClick={():void=>setIsShowDialog(!isShowDialog)}/>}
+                {isMobile && <MenuIcon className='toggle-btn text-white' onClick={(): void => setIsShowDialog(!isShowDialog)} />}
             </section>
             {
-               isMobile && isShowDialog &&<div className='mobile-nav-items-dialog'>
-                  {navLinks}
+                isMobile && isShowDialog && <div className='mobile-nav-items-dialog'>
+                    {navLinks}
                 </div>
             }
 

@@ -10,7 +10,7 @@
     justify-content: space-between;
     height: 70px;
     width: 100vw;
-    background-color: white;
+    background-color: rgb(1, 1, 26);
     z-index: 100;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
@@ -20,7 +20,8 @@
     font-family: "Ubuntu", sans-serif;
     font-weight: 400;
     font-style: normal;
-    color: #01012a;
+    /* color: #01012a; */
+    color: whitesmoke;
     letter-spacing: 2px;
     text-shadow: 1px 0px 1px rgba(21, 22, 72, 0.4);
 }
@@ -89,7 +90,7 @@
    .nav .mobile-nav-items-dialog .active,
    .nav a:hover {
     color: orange;
-    text-decoration: underline;
+    /* text-decoration: underline; */
 }
 
 @media screen and (max-width:900px) {

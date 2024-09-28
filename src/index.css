@@ -1,23 +1,48 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-*{
+
+* {
   margin: 0;
   padding: 0;
   /* overflow-x: hidden; */
 }
-body{
-  background: #eceef9;
+
+body {
+  /* background: #eceef9; */
+  background: rgb(4, 3, 14);
   overflow-x: hidden;
 }
-.color-02aabd{
+
+.color-02aabd {
   color: #02aabd;
 }
+
 input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button{
+input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
 }
 
-.color-ff5500{
+.color-ff5500 {
   color: #ff5500;
 }
+
+/* For Firefox */
+*::-webkit-scrollbar {
+  width: 10px;
+  opacity: 0; /* Hide scrollbar by default */
+  transition: opacity 0.2s; /* Smooth transition for opacity */
+}
+
+*::-webkit-scrollbar-track {
+  display: none; /* Hide the scrollbar track */
+}
+
+*::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(180deg, #d0368a 0%, #708ad4 99%);
+  box-shadow: inset 2px 2px 5px rgba(255, 255, 255, 0.5); /* Correct RGBA syntax */
+  border-radius: 50px; /* Rounded corners */
+
+}
+
+

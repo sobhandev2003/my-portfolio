@@ -1,93 +1,125 @@
-import '../css/Contact.css'
 import React, { useRef, useState } from 'react';
-// import emailjs from '@emailjs/browser';
-// import { toast } from 'react-toastify';
-
-
-import contactPage from '../assets/contactPage.jpeg';
-import { TfiHeadphoneAlt } from "react-icons/tfi";
-import { FaUser } from "react-icons/fa6";
-import { MdEmail } from "react-icons/md";
-import { FaPhoneAlt } from "react-icons/fa";
-import { BsFillSendFill } from "react-icons/bs";
-import { BiMessageDetail } from "react-icons/bi";
 import { mailOptionType, sendEmail } from '../services/sendContactEmail';
 import { toast } from 'react-toastify';
-const Contact:React.FC = () => { 
-//NOTE -This function send Email 
-const formRef = useRef<HTMLFormElement>(null);
+import { GrContact } from "react-icons/gr";
+import { TextField } from '@mui/material';
+import { GiCrossMark } from "react-icons/gi";
+import { BsFillSendFill } from "react-icons/bs";
+const Contact: React.FC = () => {
+  //NOTE -This function send Email 
+  const formRef = useRef<HTMLFormElement>(null);
+  const contactRef = useRef<HTMLDivElement>(null);
+  const [isContact, setIsContact] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    message: ''
+  });
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>): void => {
+    const { name, value } = e.target;
+    setFormData((prevState: any) => ({
+      ...prevState,
+      [name]: value
+    }));
+  };
 
-const [formData, setFormData] = useState({
-  name: '',
-  email: '',
-  phone: '',
-  message: ''
-});
-const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>): void => {
-  const { name, value } = e.target;
-  setFormData((prevState:any) => ({
-    ...prevState,
-    [name]: value
-  }));
-};
-
-const handelSubmit = async(e:React.SyntheticEvent) => {
-  e.preventDefault();
-
-  // console.log(formData)
-
-  const mailOption:mailOptionType={
-    mailSendFrom:formData.email,
-    mailSendTo:"sobhandevp2021@gmail.com",
-    mailSubject:`Get email from ${formData.name}`,
-    phoneNumber:formData.phone,
-    mailText:formData.message
-  }
-   const success= sendEmail(mailOption)
-  toast.promise(success,{
-    pending: 'Sending email...', // Display loading message
-    success: 'Email sent successfully.', // Display success message
-    error: 'Failed to send email. Please try again later.' // Display error message
-});
-
-  success.then((res)=>{
-    if(res){
-      if (formRef.current) {
-            formRef.current.reset()
-      } 
+  const handelSubmit = async (e: React.SyntheticEvent) => {
+    e.preventDefault();
+    const mailOption: mailOptionType = {
+      mailSendFrom: formData.email,
+      mailSendTo: "sobhandevp2021@gmail.com",
+      mailSubject: `Get email from ${formData.name}`,
+      phoneNumber: formData.phone,
+      mailText: formData.message
     }
-  })
-};
+    const success = sendEmail(mailOption)
+    toast.promise(success, {
+      pending: 'Sending...',
+      success: 'Message sent successfully.',
+      error: 'Failed to send email. Please try again later.'
+    });
 
-  return <div id='contact'>
-    <h1><span><TfiHeadphoneAlt /></span>Get In<span className='color-ff5500'> Touch</span></h1>
-  <div className='contact-box'>
-  <section className='image-section'>
-      <img src={contactPage} alt=''></img>
-    </section>
-    <section className='contact-section'>
-      <form className='contact-from' ref={formRef} onSubmit={handelSubmit}>
-        <label >
-        <input type="text" className='input-field' name="name"  onChange={handleChange} minLength={3} maxLength={50} placeholder='' required />
-        <span className='placeholder'><FaUser />Name </span>
-      </label>
-      <label >
-      <input type="email" className='input-field' name="email" onChange={handleChange} placeholder=''   required/>
-      <span className='placeholder'><MdEmail />Email</span>
-      </label>
-    <label >
-    <input type="tel" className='input-field' name="phone" onChange={handleChange} placeholder='' pattern="[0-9]{10}" required/>
-    <span className='placeholder'><FaPhoneAlt />Phone</span>
-    </label>
-    <label >
-    <textarea name="message" className='textarea-field' onChange={handleChange}  placeholder='' minLength={10}  required spellCheck={true}/>
-    <span className='textarea-placeholder'><BiMessageDetail />Message</span>
-    </label>
-      <button type="submit" className='send-btn'>Send<BsFillSendFill /></button>
+    success.then((res) => {
+      if (res) {
+        if (formRef.current) {
+          formRef.current.reset()
+        }
+      }
+    })
+  };
+
+
+
+
+  return (<div ref={contactRef} className='' >
+    {!isContact && <button
+      className='bg-[#f39c12] text-white py-2 px-4  rounded-t-xl'
+      onClick={() => setIsContact(true)}
+    >
+      <GrContact fontSize={"2rem"} />
+    </button>}
+    {isContact && <div className='z-20 w-80  p-3 py-8 border bg-white rounded-t-xl'>
+      <button
+        className=' absolute -right-1 -top-[2%] italic text-red-600 '
+        onClick={() => setIsContact(false)}
+      >
+        <GiCrossMark fontSize={"1.5rem"} fontWeight={500} fontStyle={"italic"} />
+      </button>
+      <form className='flex flex-col gap-2 relative w-full mb-4 ' ref={formRef} onSubmit={handelSubmit}>
+        <TextField
+          required
+          id="outlined-required"
+          label="Name"
+          name='name'
+          onChange={handleChange}
+          inputProps={{ minLength: 3, maxLength: 50 }}
+        />
+        <TextField
+          required
+          id="outlined-required"
+          label="Email"
+          type="email"
+          name='email'
+          onChange={handleChange}
+        />
+        <TextField
+          required
+          id="outlined-required"
+          label="Phone"
+          type='tel'
+          name='phone'
+          onChange={handleChange}
+          inputProps={{ minLength: 10, maxLength: 10 }}
+        />
+        <TextField
+          required
+          id="outlined-required"
+          label="Message"
+          name='message'
+          type="text"
+          onChange={handleChange}
+          inputProps={{ minLength: 10 }}
+          multiline
+          rows={3}
+          sx={{
+            '& .MuiOutlinedInput-root': {
+              '& textarea': {
+                overflowY: 'scroll',
+                scrollbarWidth: "none",
+                '&::-webkit-scrollbar': {
+                  display: 'none',
+                },
+              },
+            },
+          }}
+        />
+
+        <button type="submit" className='absolute -bottom-[15%] right-1 py-1 px-3 text-white bg-[#4bcffa] rounded-lg'><BsFillSendFill fontSize={"1.2rem"} /></button>
       </form>
-    </section>
-  </div>
-  </div>
+    </div>}
+
+  </div>)
 }
 
 export default Contact
