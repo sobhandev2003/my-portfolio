@@ -32,7 +32,6 @@ export const WebsiteLink: React.FC = () => {
 }
 const Home: React.FC = () => {
     const typeWords = ["Web Development", "Frontend Development", "Backend Development"];
-  
     return <div id="home">
         <section>
             <h1 >Hi There , <br /> I'm  <span className='name'>Sobhandev Pramanik</span></h1>
@@ -49,20 +48,18 @@ const Home: React.FC = () => {
                         delaySpeed={1500}
                         cursorBlinking={false}
                     />
-                    {/* Frontend Development */}
                 </p>
 
             </div>
-            <Link to={resumeDownloadUrl} download className='about-scroll-btn' > Resume <FaFileDownload /></Link>
+            <Link to={resumeDownloadUrl} download className='download-resume' > Resume <FaFileDownload /></Link>
             <WebsiteLink />
         </section>
         <section>
-            <CardContainer>
-
+            <CardContainer containerClassName='py-[0rem] mt-[-13rem]'>
                 <OrbitingCirclesHome />
             </CardContainer>
         </section>
-        <video className='home-background' autoPlay muted loop >
+        <video className='absolute home-background' autoPlay muted loop >
             <source src={homeBackgrounVideo} type="video/mp4" />
         </video>
 

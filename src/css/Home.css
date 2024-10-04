@@ -4,13 +4,15 @@
 
 @keyframes outer-div-animation {
 
-    50%{
-        transform: skew(3deg,2deg);
+    50% {
+        transform: skew(3deg, 2deg);
     }
-    100%{
-        transform: skew(3deg,1deg);
+
+    100% {
+        transform: skew(3deg, 1deg);
     }
 }
+
 #home {
     position: relative;
     width: 100vw;
@@ -73,11 +75,12 @@
 #home section:nth-child(1) .type-div .type-text {
     color: #50ff84;
 }
- .website-link{
+
+.website-link {
     margin-bottom: 1rem;
 }
 
- .website-link ul {
+.website-link ul {
     /* border: 1px solid red; */
     margin-top: 20px;
     display: flex;
@@ -118,10 +121,11 @@
     color: rgb(179, 179, 250);
 }
 
-#home section:nth-child(1) .about-scroll-btn {
+#home section:nth-child(1) .download-resume {
     align-items: center;
-    background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
-    border: 0;
+    background: rgb(96, 9, 240);
+    background: linear-gradient(0deg, rgba(96, 9, 240, 1) 0%, rgba(129, 5, 240, 1) 100%);
+    border: none;
     border-radius: 8px;
     box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
     box-sizing: border-box;
@@ -160,7 +164,7 @@
     /* border: 1px solid red;  */
     width: 45%;
     display: flex;
-    padding-top: 6rem;
+    /* padding-top: 6rem; */
 }
 
 #home section:nth-child(2) .inner-div ul li:nth-child(8) {

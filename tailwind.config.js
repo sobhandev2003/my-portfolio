@@ -17,7 +17,16 @@ export default {
       '3xl': '1.953rem',
       '4xl': '2.441rem',
       '5xl': '3.052rem',
-    }
+    },
+    keyframes: {
+      bgShift: {
+        '0%, 100%': { 'background-position': 'left center', 'background-size': '300%' },
+        '50%': { 'background-position': 'right center', 'background-size': '320%' },
+      },
+    },
+    animation: {
+      bgShift: 'bgShift 3s infinite ease-in-out', // 3s is the timing duration; adjust as needed
+    },
   },
   plugins: [],
 }
