@@ -1,10 +1,17 @@
 /** @type {import('tailwindcss').Config} */
 import flattenColorPalette from "tailwindcss/lib/util/flattenColorPalette";
+const defaultTheme = require("tailwindcss/defaultTheme");
+const colors = require("tailwindcss/colors");
+const {
+  default: flattenColorPalette,
+} = require("tailwindcss/lib/util/flattenColorPalette");
+
 export default {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode: "class",
   theme: {
     extend: {
 
@@ -28,7 +35,10 @@ export default {
       bgShift: 'bgShift 3s infinite ease-in-out', // 3s is the timing duration; adjust as needed
     },
   },
-  plugins: [],
+  plugins: [
+    // rest of the code
+    addVariablesForColors,
+  ],
 }
 
 // tailwind.config.js
@@ -37,17 +47,18 @@ module.exports = {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode: "class",
   theme: {
 
     extend: {
       screens: {
-        '2xl': { 'max': '1535px' },
-        // => @media (max-width: 1535px) { ... }
+        // '2xl': { 'max': '1535px' },
+        // // => @media (max-width: 1535px) { ... }
 
-        'xl': { 'max': '1279px' },
+        // 'xl': { 'max': '1279px' },
         // => @media (max-width: 1279px) { ... }
 
-        'lg': { 'max': '1023px', "min": "640px" },
+        // 'lg': { 'max': '1023px', "min": "640px" },
         // => @media (max-width: 1023px) { ... }
 
         'md': { 'max': '767px' },
@@ -69,9 +80,13 @@ module.exports = {
           },
         },
       },
-   
+
     },
   },
+  plugins: [
+    // rest of the code
+    addVariablesForColors,
+  ],
 };
 
 function addVariablesForColors({ addBase, theme }) {

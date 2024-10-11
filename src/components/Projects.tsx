@@ -13,13 +13,13 @@ const Projects = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
+    // autoplay: true,
     autoplaySpeed: 1500,
     cssEase: "linear",
 
   };
   return <div id="projects" className=''>
-    <div className='w-[45%] sm:w-[90%] lg:w-[70%] '>
+    <div className=' project-container '>
       {
         projects &&
         <Slider {...settings} >{
