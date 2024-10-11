@@ -40,7 +40,7 @@ const content = [
 
 const Education: React.FC = () => {
 
-  return <div  className='w-screen min-h-[90vh] flex flex-col items-center pt-8 pb-12 arrow-Scroll'>
+  return <div id='education' className='w-screen min-h-[90vh] flex flex-col items-center pt-8 pb-12 arrow-Scroll'>
     <StickyScroll content={content} />
   </div>
 }
