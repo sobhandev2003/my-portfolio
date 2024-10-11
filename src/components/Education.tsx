@@ -1,4 +1,5 @@
 import { StickyScroll } from './ui/sticky-scroll-reveal';
+import { TracingBeam } from './ui/tracing-beam';
 
 const content = [
   {

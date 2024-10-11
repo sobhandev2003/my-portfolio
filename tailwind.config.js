@@ -52,15 +52,6 @@ module.exports = {
 
     extend: {
       screens: {
-        // '2xl': { 'max': '1535px' },
-        // // => @media (max-width: 1535px) { ... }
-
-        // 'xl': { 'max': '1279px' },
-        // => @media (max-width: 1279px) { ... }
-
-        // 'lg': { 'max': '1023px', "min": "640px" },
-        // => @media (max-width: 1023px) { ... }
-
         'md': { 'max': '767px' },
         // => @media (max-width: 767px) { ... }
 
@@ -69,6 +60,7 @@ module.exports = {
       },
       animation: {
         orbit: "orbit calc(var(--duration)*1s) linear infinite",
+        shimmer: "shimmer 2s linear infinite"
       },
       keyframes: {
         orbit: {
@@ -79,6 +71,15 @@ module.exports = {
             transform: "rotate(360deg) translateY(calc(var(--radius) * 1px)) rotate(-360deg)",
           },
         },
+        
+        shimmer: {
+          from: {
+            "backgroundPosition": "0 0"
+          },
+          to: {
+            "backgroundPosition": "-200% 0"
+          }
+        }
       },
 
     },

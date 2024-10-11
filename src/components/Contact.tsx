@@ -54,7 +54,7 @@ const Contact: React.FC = () => {
 
   return (<div ref={contactRef} className='' >
     {!isContact && <button
-      className=' py-2 px-4  rounded-t-xl flex items-center  cursor-pointer gap-1 font-bold  text-white shadow-[2px_2px_3px_rgba(136,0,136,0.5)] bg-gradient-to-r from-[#880088] via-[#aa2068] via-[#cc3f47] via-[#de6f3d] via-[#f09f33] via-[#de6f3d] via-[#cc3f47] via-[#aa2068] to-[#880088] bg-[length:300%_100%] bg-left-center shadow-[0_30px_10px_-20px_rgba(0,0,0,0.2)] transition-[background-position] ease-linear duration-300 animate-bgShift'
+    className='inline-flex h-12 animate-shimmer items-center justify-center rounded-t-xl  border border-slate-800 bg-[linear-gradient(110deg,#d35400,45%,#e67e22,55%,#d35400)] bg-[length:200%_100%] px-6 font-medium text-white transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50'
       onClick={() => setIsContact(true)}
     >
       <GrContact fontSize={"2rem"} />
