@@ -22,7 +22,8 @@ const Projects = () => {
     <div className=' project-container '>
       {
         projects &&
-        <Slider {...settings} >{
+        // <Slider {...settings} >{
+          
           projects.projects.map((project, index) => {
             return <ProjectsCard key={index}
               title={project.title}
@@ -33,8 +34,8 @@ const Projects = () => {
               tools={project.tools}
             />
           })
-        }
-        </Slider>
+
+        // }</Slider>
       }
     </div>
   </div>

@@ -16,7 +16,7 @@ type Project = {
 export const ProjectsCard = (props: Project) => {
   const { title, description, snapshot, githubRepoLink, websiteLink, tools } = props;
   return (
-    <div className='p-16'>
+    <div className='p-16 w-[500px] '>
       <CardContainer className='inter-var bg-[#02AABD] text-white rounded-xl' >
         <CardBody className=" relative group/card  w-full p-3 h-max flex flex-col gap-4 ">
           <CardItem translateZ="100" className="w-full flex flex-col items-center text-3xl font-bold ">
@@ -44,22 +44,6 @@ export const ProjectsCard = (props: Project) => {
 
 
         </CardBody>
-        {/* <div className="wrapper">
-      <img src={`projects/${snapshot}`} className="project-image" />
-      <h2>{title}</h2>
-      <p>{description}</p>
-    </div>
-    <div className='tools-container'>
-      {
-        tools.map((tool,index)=>(
-          <p key={index} className='tool-name'>{tool}</p>
-        ))
-      }
-    </div>
-    <div className="button-wrapper">
-      <Link to={githubRepoLink} target='_blank' className="btn right"><BsGithub /></Link>
-      <Link to={websiteLink} target='_blank' className="btn left"><BsBrowserChrome /></Link>
-    </div> */}
       </CardContainer>
     </div>
   )
